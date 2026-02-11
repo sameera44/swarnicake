@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarni Cake - Premium Bakery in Sri Lanka</title>
+    <meta name="description" content="Order premium cakes, wedding cakes, and cupcakes from Swarni Cake. Best quality and taste in Sri Lanka.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'soft-pink': '#FFF0F5',
+                        'deep-pink': '#D81B60',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif font-bold flex items-center gap-2">
+                <i class="fas fa-birthday-cake text-deep-pink"></i>
+                <span class="logo-text">Swarni Cake</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+                <a href="index.html" class="hover:text-gold transition text-gold">Home</a>
+                <a href="about.html" class="hover:text-gold transition">About Us</a>
+                <div class="relative group">
+                    <button class="hover:text-gold transition flex items-center">Cakes <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <!-- Dropdown -->
+                    <div class="absolute top-full left-0 w-48 bg-white shadow-xl rounded-b-lg hidden group-hover:block transition-all duration-200">
+                        <a href="wedding-cakes.html" class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink border-b border-gray-100">Wedding Cakes</a>
+                        <a href="birthday-cakes.html" class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink border-b border-gray-100">Birthday Cakes</a>
+                        <a href="custom-cakes.html" class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink border-b border-gray-100">Custom Cakes</a>
+                        <a href="cupcakes.html" class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink">Cupcakes</a>
+                    </div>
+                </div>
+                <a href="gallery.html" class="hover:text-gold transition">Gallery</a>
+                <a href="menu.html" class="hover:text-gold transition">Menu & Prices</a>
+                <a href="contact.html" class="btn-primary px-6 py-2 rounded-full font-bold shadow-lg transform hover:scale-105 active:scale-95 transition">Contact Us</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden flex-col md:hidden bg-white shadow-lg absolute w-full left-0 top-full">
+            <a href="index.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink text-gold font-bold">Home</a>
+            <a href="about.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink">About Us</a>
+            <a href="wedding-cakes.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Wedding Cakes</a>
+            <a href="birthday-cakes.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Birthday Cakes</a>
+            <a href="custom-cakes.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Custom Cakes</a>
+            <a href="cupcakes.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Cupcakes</a>
+            <a href="gallery.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink">Gallery</a>
+            <a href="menu.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink">Menu & Prices</a>
+            <a href="contact.html" class="block px-6 py-3 hover:bg-soft-pink font-bold text-deep-pink">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Swarni Cake Bakery" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+
+        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="text-xl md:text-2xl font-light tracking-widest mb-4 uppercase">Welcome to Swarni Cake</h2>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">Taste the <span class="text-gold">Magic</span> in<br>Every Bite</h1>
+            <p class="text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 text-gray-200">
+                Premium handcrafted cakes for weddings, birthdays, and special occasions. Made with love and the finest ingredients in Sri Lanka.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="menu.html" class="btn-primary px-8 py-3 rounded-full font-bold text-lg shadow-xl">View Menu</a>
+                <a href="contact.html" class="bg-white/10 backdrop-blur-md border md:border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-black transition duration-300">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="p-8 rounded-2xl bg-soft-pink/30 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-md mb-6 text-4xl text-gold">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Premium Quality</h3>
+                    <p class="text-gray-600">We use only the finest ingredients, from Belgian chocolate to fresh organic fruits, ensuring a luxurious taste.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-soft-pink/30 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-md mb-6 text-4xl text-Deep-pink font-bold" style="color: #D81B60;">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Custom Designs</h3>
+                    <p class="text-gray-600">Bring your vision to life. Our artists create stunning custom designs that are as beautiful as they are delicious.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-soft-pink/30 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-md mb-6 text-4xl text-gold">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Timely Delivery</h3>
+                    <p class="text-gray-600">Reliable delivery service across the region. Your cake arrives fresh and perfect for your special moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Our <span class="text-gold">Specialties</span></h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Category 1 -->
+                <a href="wedding-cakes.html" class="group relative overflow-hidden rounded-xl shadow-lg h-96 block" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wedding Cakes" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-serif font-bold mb-1 group-hover:text-gold transition">Wedding Cakes</h3>
+                        <p class="text-sm opacity-90">Elegant & Timeless</p>
+                    </div>
+                </a>
+                
+                <!-- Category 2 -->
+                <a href="birthday-cakes.html" class="group relative overflow-hidden rounded-xl shadow-lg h-96 block" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Cakes" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-serif font-bold mb-1 group-hover:text-gold transition">Birthday Cakes</h3>
+                        <p class="text-sm opacity-90">Fun & Vibrant</p>
+                    </div>
+                </a>
+
+                <!-- Category 3 -->
+                <a href="cupcakes.html" class="group relative overflow-hidden rounded-xl shadow-lg h-96 block" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d779b959d46d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cupcakes" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-serif font-bold mb-1 group-hover:text-gold transition">Cupcakes</h3>
+                        <p class="text-sm opacity-90">Sweet Little Treats</p>
+                    </div>
+                </a>
+
+                <!-- Category 4 -->
+                <a href="custom-cakes.html" class="group relative overflow-hidden rounded-xl shadow-lg h-96 block" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1562777717-dc6984f65392?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Custom Cakes" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-serif font-bold mb-1 group-hover:text-gold transition">Custom Designs</h3>
+                        <p class="text-sm opacity-90">Your Imagination, Baked</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 relative bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8" data-aos="zoom-in">Ready to Order Your Dream Cake?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">Contact us today to discuss your requirements. We create magic for every occasion.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="tel:+94767759143" class="btn-primary px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i> +94 767 759 143
+                </a>
+                <a href="contact.html" class="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Get a Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="text-3xl font-serif font-bold flex items-center gap-2 mb-6">
+                        <i class="fas fa-birthday-cake text-gold"></i>
+                        <span class="text-white">Swarni Cake</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Crafting delicious memories since 2020. Your go-to place for premium quality cakes in Sri Lanka.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-span-1">
+                    <h3 class="text-xl font-serif font-bold mb-6 text-gold">Quick Links</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="menu.html" class="hover:text-white transition">Menu & Prices</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="reviews.html" class="hover:text-white transition">Reviews</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h3 class="text-xl font-serif font-bold mb-6 text-gold">Categories</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="wedding-cakes.html" class="hover:text-white transition">Wedding Cakes</a></li>
+                        <li><a href="birthday-cakes.html" class="hover:text-white transition">Birthday Cakes</a></li>
+                        <li><a href="custom-cakes.html" class="hover:text-white transition">Custom Cakes</a></li>
+                        <li><a href="cupcakes.html" class="hover:text-white transition">Cupcakes</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h3 class="text-xl font-serif font-bold mb-6 text-gold">Contact Info</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-gold"></i>
+                            <span>Sri Lanka</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone-alt mt-1 text-gold"></i>
+                            <a href="tel:+94767759143" class="hover:text-white">+94 767 759 143</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1 text-gold"></i>
+                            <a href="mailto:swarnicake@gmail.com" class="hover:text-white">swarnicake@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Swarni Cake. All Rights Reserved. Designed with <i class="fas fa-heart text-red-500"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+</html>

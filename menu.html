@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu & Prices - Swarni Cake</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'soft-pink': '#FFF0F5',
+                        'deep-pink': '#D81B60',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif font-bold flex items-center gap-2">
+                <i class="fas fa-birthday-cake text-deep-pink"></i>
+                <span class="logo-text">Swarni Cake</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="about.html" class="hover:text-gold transition">About Us</a>
+                <div class="relative group">
+                    <button class="hover:text-gold transition flex items-center">Cakes <i
+                            class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div
+                        class="absolute top-full left-0 w-48 bg-white shadow-xl rounded-b-lg hidden group-hover:block transition-all duration-200">
+                        <a href="wedding-cakes.html"
+                            class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink border-b border-gray-100">Wedding
+                            Cakes</a>
+                        <a href="birthday-cakes.html"
+                            class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink border-b border-gray-100">Birthday
+                            Cakes</a>
+                        <a href="custom-cakes.html"
+                            class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink border-b border-gray-100">Custom
+                            Cakes</a>
+                        <a href="cupcakes.html"
+                            class="block px-4 py-3 hover:bg-soft-pink hover:text-deep-pink">Cupcakes</a>
+                    </div>
+                </div>
+                <a href="gallery.html" class="hover:text-gold transition">Gallery</a>
+                <a href="menu.html" class="hover:text-gold transition text-gold">Menu & Prices</a>
+                <a href="contact.html"
+                    class="btn-primary px-6 py-2 rounded-full font-bold shadow-lg transform hover:scale-105 active:scale-95 transition">Contact
+                    Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none"><i
+                    class="fas fa-bars text-2xl"></i></button>
+        </div>
+        <!-- Mobile Menu (Hidden) -->
+        <div id="menu" class="hidden flex-col md:hidden bg-white shadow-lg absolute w-full left-0 top-full">
+            <a href="index.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink">Home</a>
+            <a href="about.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink">About Us</a>
+            <a href="wedding-cakes.html"
+                class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Wedding Cakes</a>
+            <a href="birthday-cakes.html"
+                class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Birthday Cakes</a>
+            <a href="custom-cakes.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Custom
+                Cakes</a>
+            <a href="cupcakes.html"
+                class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink pl-10">Cupcakes</a>
+            <a href="gallery.html" class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink">Gallery</a>
+            <a href="menu.html"
+                class="block px-6 py-3 border-b border-gray-100 hover:bg-soft-pink text-gold font-bold">Menu &
+                Prices</a>
+            <a href="contact.html" class="block px-6 py-3 hover:bg-soft-pink font-bold text-deep-pink">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative bg-gray-900 text-white py-32 text-center"
+        style="background-image: url('https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 px-6">
+            <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4" data-aos="fade-down">Menu & Pricing</h1>
+            <p class="text-xl max-w-2xl mx-auto text-gray-300" data-aos="fade-up">Delicious options for every budget</p>
+        </div>
+    </header>
+
+    <!-- Menu Content -->
+    <main class="flex-grow container mx-auto px-6 py-16">
+
+        <!-- Flavor Section -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-center mb-10 text-gold">Standard Cake Flavors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border hover:border-gold transition">
+                    <h3 class="text-xl font-bold mb-2 text-deep-pink">Classic Vanilla</h3>
+                    <p class="text-gray-600 text-sm">Light, fluffy vanilla sponge with buttercream.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border hover:border-gold transition">
+                    <h3 class="text-xl font-bold mb-2 text-deep-pink">Rich Chocolate</h3>
+                    <p class="text-gray-600 text-sm">Decadent chocolate cake with ganache or cocoa frosting.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border hover:border-gold transition">
+                    <h3 class="text-xl font-bold mb-2 text-deep-pink">Red Velvet</h3>
+                    <p class="text-gray-600 text-sm">Classic red velvet with smooth cream cheese frosting.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border hover:border-gold transition">
+                    <h3 class="text-xl font-bold mb-2 text-deep-pink">Strawberry Delight</h3>
+                    <p class="text-gray-600 text-sm">Fresh strawberry infused sponge with berry filling.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border hover:border-gold transition">
+                    <h3 class="text-xl font-bold mb-2 text-deep-pink">Coffee Mocha</h3>
+                    <p class="text-gray-600 text-sm">Coffee flavored cake with chocolate espresso buttercream.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border hover:border-gold transition">
+                    <h3 class="text-xl font-bold mb-2 text-deep-pink">Butter Cake</h3>
+                    <p class="text-gray-600 text-sm">Traditional Sri Lankan rich butter cake.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Table -->
+        <section class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-serif font-bold text-center mb-10 text-gold">Starting Prices</h2>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+                <table class="min-w-full text-left">
+                    <thead class="bg-soft-pink text-deep-pink">
+                        <tr>
+                            <th class="px-6 py-4 font-serif font-bold text-lg">Type</th>
+                            <th class="px-6 py-4 font-serif font-bold text-lg">Size (approx)</th>
+                            <th class="px-6 py-4 font-serif font-bold text-lg">Price (LKR)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium">Standard Birthday Cake</td>
+                            <td class="px-6 py-4">1 kg</td>
+                            <td class="px-6 py-4 font-bold text-gold">From 4,500/=</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium">Butter Cake (Ribbon)</td>
+                            <td class="px-6 py-4">1 kg</td>
+                            <td class="px-6 py-4 font-bold text-gold">From 3,500/=</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium">Chocolate Drip Cake</td>
+                            <td class="px-6 py-4">1 kg</td>
+                            <td class="px-6 py-4 font-bold text-gold">From 5,500/=</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium">Wedding Structure (Base)</td>
+                            <td class="px-6 py-4">Per Tier</td>
+                            <td class="px-6 py-4 font-bold text-gold">From 8,000/=</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium">Cupcakes</td>
+                            <td class="px-6 py-4">Box of 6</td>
+                            <td class="px-6 py-4 font-bold text-gold">From 1,800/=</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-gray-500 mt-6 text-sm">* Prices may vary based on design complexity and
+                customizations. Contact us for a quote.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-10 pb-6 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Swarni Cake. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>
